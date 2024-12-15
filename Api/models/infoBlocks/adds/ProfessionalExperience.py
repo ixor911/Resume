@@ -25,16 +25,4 @@ class ProfessionalExperience(models.Model):
 class ProfessionalExperienceSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProfessionalExperience
-        fields = [
-            'job_title',
-            'employer',
-            'city',
-            'description',
-            'start_date',
-            'end_date',
-            'is_now',
-            'position',
-            'block',
-            'skills',
-            'languages',
-        ]
+        fields = '__all__'

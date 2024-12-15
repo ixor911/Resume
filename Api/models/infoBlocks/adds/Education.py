@@ -24,15 +24,4 @@ class Education(models.Model):
 class EducationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Education
-        fields = [
-            'school',
-            'degree',
-            'city',
-            'description',
-            'start_date',
-            'end_date',
-            'is_now',
-            'position',
-            'block',
-            'skills',
-        ]
+        fields = '__all__'

@@ -17,9 +17,4 @@ class LanguageScale(models.Model):
 class LanguageScaleSerializer(serializers.ModelSerializer):
     class Meta:
         model = LanguageScale
-        fields = [
-            'experience',
-            'language',
-            'position',
-            'block',
-        ]
+        fields = '__all__'

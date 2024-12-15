@@ -15,8 +15,4 @@ class File(models.Model):
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = File
-        fields = [
-            'file',
-            'position',
-            'block',
-        ]
+        fields = '__all__'

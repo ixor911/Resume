@@ -15,9 +15,4 @@ class Link(models.Model):
 class LinkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Link
-        fields = [
-            'label',
-            'link',
-            'position',
-            'block',
-        ]
+        fields = '__all__'

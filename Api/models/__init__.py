@@ -1,6 +1,6 @@
-from .Language import Language
-from .Skill import Skill
-from .Resume import Resume
+from .Language import Language, LanguageSerializer
+from .Skill import Skill, SkillSerializer
+from .Resume import Resume, ResumeSerializer
 
 from . import infoBlocks
 from .infoBlocks import *

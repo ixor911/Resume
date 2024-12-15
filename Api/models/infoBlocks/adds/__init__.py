@@ -1,6 +1,6 @@
-from .Education import Education
-from .File import File
-from .LanguageScale import LanguageScale
-from .Link import Link
-from .ProfessionalExperience import ProfessionalExperience
-from .SkillScale import Skill
+from .Education import Education, EducationSerializer
+from .File import File, FileSerializer
+from .LanguageScale import LanguageScale, LanguageScaleSerializer
+from .Link import Link, LinkSerializer
+from .ProfessionalExperience import ProfessionalExperience, ProfessionalExperienceSerializer
+from .SkillScale import Skill, SkillScaleSerializer

@@ -13,7 +13,4 @@ class SummaryBlock(models.Model):
 class SummaryBlockSerializer(serializers.ModelSerializer):
     class Meta:
         model = SummaryBlock
-        fields = [
-            'text',
-            'resume'
-        ]
+        fields = '__all__'

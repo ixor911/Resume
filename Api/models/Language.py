@@ -9,6 +9,4 @@ class Language(models.Model):
 class LanguageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Language
-        fields = [
-            'name'
-        ]
+        fields = '__all__'

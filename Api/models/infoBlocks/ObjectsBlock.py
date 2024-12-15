@@ -23,9 +23,4 @@ class ObjectsBlock(models.Model):
 class ObjectsBlockSerializer(serializers.ModelSerializer):
     class Meta:
         model = ObjectsBlock
-        fields = [
-            'type',
-            'status',
-            'position',
-            'resume'
-        ]
+        fields = '__all__'

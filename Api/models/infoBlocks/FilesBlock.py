@@ -23,9 +23,4 @@ class FilesBlock(models.Model):
 class FilesBlockSerializer(serializers.ModelSerializer):
     class Meta:
         model = FilesBlock
-        fields = [
-            'type',
-            'status',
-            'position',
-            'resume'
-        ]
+        fields = '__all__'

@@ -21,15 +21,4 @@ class DetailsBlock(models.Model):
 class DetailsBlockSerializer(serializers.ModelSerializer):
     class Meta:
         model = DetailsBlock
-        fields = [
-            'first_name',
-            'last_name',
-            'job_title',
-            'email',
-            'phone',
-            'country',
-            'city',
-            'image',
-            'position',
-            'resume',
-        ]
+        fields = '__all__'

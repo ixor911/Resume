@@ -9,6 +9,4 @@ class Resume(models.Model):
 class ResumeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Resume
-        fields = [
-            'name'
-        ]
+        fields = '__all__'

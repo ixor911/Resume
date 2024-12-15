@@ -1,5 +1,5 @@
-from .ObjectsBlock import ObjectsBlock
-from .DetailsBlock import DetailsBlock
-from .FilesBlock import FilesBlock
+from .ObjectsBlock import ObjectsBlock, ObjectsBlockSerializer
+from .DetailsBlock import DetailsBlock, DetailsBlockSerializer
+from .FilesBlock import FilesBlock, FilesBlockSerializer
 
 from . import adds

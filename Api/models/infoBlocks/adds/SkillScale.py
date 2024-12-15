@@ -17,9 +17,4 @@ class SkillScale(models.Model):
 class SkillScaleSerializer(serializers.ModelSerializer):
     class Meta:
         model = SkillScale
-        fields = [
-            'experience',
-            'skill',
-            'position',
-            'block',
-        ]
+        fields = '__all__'

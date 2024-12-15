@@ -1,5 +1,8 @@
 from django.db import models
+from rest_framework import serializers
+
 from Api.models import Resume
+
 
 class DetailsBlock(models.Model):
     first_name = models.CharField(max_length=50)
@@ -13,3 +16,20 @@ class DetailsBlock(models.Model):
 
     position = models.PositiveSmallIntegerField()
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE)
+
+
+class DetailsBlockSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DetailsBlock
+        fields = [
+            'first_name',
+            'last_name',
+            'job_title',
+            'email',
+            'phone',
+            'country',
+            'city',
+            'image',
+            'position',
+            'resume',
+        ]

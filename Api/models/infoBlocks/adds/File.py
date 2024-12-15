@@ -1,4 +1,6 @@
 from django.db import models
+from rest_framework import serializers
+
 from UserFiles import path
 from .. import FilesBlock
 
@@ -8,3 +10,13 @@ class File(models.Model):
 
     position = models.PositiveSmallIntegerField()
     block = models.ForeignKey(FilesBlock, on_delete=models.CASCADE)
+
+
+class FileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = File
+        fields = [
+            'file',
+            'position',
+            'block',
+        ]

@@ -1,6 +1,9 @@
 from django.db import models
+from rest_framework import serializers
+
 from .. import ObjectsBlock
 from ... import Skill
+
 
 class Education(models.Model):
     school = models.CharField(max_length=50, blank=True)
@@ -16,3 +19,20 @@ class Education(models.Model):
     block = models.ForeignKey(ObjectsBlock, on_delete=models.CASCADE)
 
     skills = models.ManyToManyField(Skill, blank=True)
+
+
+class EducationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Education
+        fields = [
+            'school',
+            'degree',
+            'city',
+            'description',
+            'start_date',
+            'end_date',
+            'is_now',
+            'position',
+            'block',
+            'skills',
+        ]

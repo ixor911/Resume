@@ -1,10 +1,9 @@
 from django.db import models
+from rest_framework import serializers
+
 from .. import ObjectsBlock
 from ... import Skill, Language
 
-employment_types = [
-
-]
 
 class ProfessionalExperience(models.Model):
     job_title = models.CharField(max_length=50)
@@ -21,3 +20,21 @@ class ProfessionalExperience(models.Model):
 
     skills = models.ManyToManyField(Skill, blank=True)
     languages = models.ManyToManyField(Language, blank=True)
+
+
+class ProfessionalExperienceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProfessionalExperience
+        fields = [
+            'job_title',
+            'employer',
+            'city',
+            'description',
+            'start_date',
+            'end_date',
+            'is_now',
+            'position',
+            'block',
+            'skills',
+            'languages',
+        ]

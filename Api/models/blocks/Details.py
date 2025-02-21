@@ -5,8 +5,6 @@ from .. import Block, Resume
 
 
 class Details(Block):
-    resume = models.OneToOneField(Resume, on_delete=models.CASCADE, primary_key=True)
-
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
     job_title = models.CharField(max_length=50, blank=True)

@@ -1,5 +1,4 @@
-from django.views import View
-from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound, status
 
@@ -7,18 +6,17 @@ from Api.models import Resume, ResumeSerializer
 from django.core.exceptions import ObjectDoesNotExist
 
 
-class ResumeView(View):
-    @api_view(['GET'])
+class ResumeView(APIView):
     def get(self, request, pk):
         try:
             resume = Resume.objects.get(id=pk)
             serializer = ResumeSerializer(resume)
+            print(serializer.data)
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         except ObjectDoesNotExist:
-            return Response(NotFound, status=status.HTTP_404_NOT_FOUND)
+            return Response(NotFound.default_detail, status=status.HTTP_404_NOT_FOUND)
 
-    @api_view(['PUT'])
     def put(self, request, pk):
         try:
             resume = Resume.objects.get(id=pk)
@@ -30,4 +28,4 @@ class ResumeView(View):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         except ObjectDoesNotExist:
-            return Response(NotFound, status=status.HTTP_404_NOT_FOUND)
+            return Response(NotFound.default_detail, status=status.HTTP_404_NOT_FOUND)

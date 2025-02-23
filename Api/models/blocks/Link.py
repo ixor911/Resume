@@ -6,7 +6,7 @@ from .. import Block
 
 class Link(Block):
     label = models.CharField(max_length=100, blank=True)
-    link = models.URLField()
+    url = models.URLField()
 
 
 class LinkSerializer(serializers.ModelSerializer):

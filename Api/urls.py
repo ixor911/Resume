@@ -11,4 +11,7 @@ urlpatterns = [
     path('summary/', SummaryView.as_view(), name="Summary"),
     path('summary/<int:pk>', SummaryView.as_view(), name="Summary"),
 
+    path('link/', LinkView.as_view(), name="Link"),
+    path('link/<int:pk>', LinkView.as_view(), name="Link"),
+
 ]

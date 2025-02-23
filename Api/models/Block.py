@@ -8,5 +8,5 @@ class Block(models.Model):
 
     status = models.BooleanField(default=False)
     locked = models.BooleanField(default=False)
-    position = models.PositiveSmallIntegerField()
+    position = models.PositiveSmallIntegerField(default=1)
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE)

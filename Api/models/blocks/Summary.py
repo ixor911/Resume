@@ -5,6 +5,7 @@ from .. import Block
 
 
 class Summary(Block):
+    header = models.CharField(max_length=50, blank=False, default='Summary')
     text = models.TextField(blank=True)
 
 

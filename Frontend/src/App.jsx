@@ -1,9 +1,17 @@
-function App() {
-  return (
-    <>
-      
-    </>
-  )
-}
+import CssBaseline from "@mui/material/CssBaseline";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-export default App
+import getRoutes from "./routes";
+
+function App() {
+	return (
+		<>
+			<CssBaseline />
+			<Routes>
+				{getRoutes()}
+			</Routes>
+		</>
+	);
+};
+
+export default App;
